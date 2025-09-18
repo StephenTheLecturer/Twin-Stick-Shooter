@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class NPCController : Entity
 {
@@ -25,7 +26,8 @@ public class NPCController : Entity
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-
+        print(collision.rigidbody.gameObject.name);
+        
         if (collision.rigidbody.name.Contains("Bullet")) 
         {
             Destroy(collision.rigidbody.gameObject);
@@ -35,6 +37,8 @@ public class NPCController : Entity
 
         if (collision.rigidbody.name.Contains("Player"))
         {
+            print("Player Hit!");
+
             m_damageCooldown -= Time.deltaTime;
 
             if (m_damageCooldown <= 0)
@@ -44,12 +48,17 @@ public class NPCController : Entity
                 m_damageCooldown = m_originalCooldown;
             }
         }
-        else 
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.rigidbody.name.Contains("Player"))
         {
             m_damageCooldown = m_originalCooldown;
         }
-
     }
+
 
     public override void OnDeath()
     {
