@@ -275,9 +275,10 @@ GameObject:
   - component: {fileID: 369189493}
   - component: {fileID: 369189492}
   - component: {fileID: 369189495}
+  - component: {fileID: 369189496}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,7 +324,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!4 &369189494
 Transform:
@@ -357,6 +358,19 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1686841316258678837, guid: c091a4078ffe26948837eec1054f6225, type: 3}
   m_attackSpeed: 0
   m_fireMode: 0
+--- !u!114 &369189496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369189491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447b4cb6a8a5da14aadec5a78934121e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_followSpeed: 1
 --- !u!1 &369671985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,6 +1929,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1316043662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1316043663}
+  - component: {fileID: 1316043664}
+  m_Layer: 0
+  m_Name: NPC Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1316043663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316043662}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1316043664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316043662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bc760cc6a2e364fa1d83e0ccad5842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NPCPrefab: {fileID: 7048269291168047215, guid: fc1afab32770f314c9d8b9c99dec7e92, type: 3}
+  m_maxNPCAmonut: 1
+  m_NPCList: []
+  m_NPCSpeed: 5
+  m_playerLocation: {x: 0, y: 0}
+  m_verticalBounds: {x: 0, y: 0}
+  m_horizontalBounds: {x: 0, y: 0}
+  m_spawnPadding: 1
 --- !u!1 &1381687206
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,3 +3283,4 @@ SceneRoots:
   - {fileID: 315845998}
   - {fileID: 1884172589}
   - {fileID: 369189494}
+  - {fileID: 1316043663}
