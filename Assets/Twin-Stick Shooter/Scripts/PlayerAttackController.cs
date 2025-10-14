@@ -1,4 +1,6 @@
- using UnityEngine;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent( typeof( PlayerController ) )]
 public class PlayerAttackController : MonoBehaviour
@@ -8,14 +10,11 @@ public class PlayerAttackController : MonoBehaviour
     public GameObject m_bulletPrefab;
 
     public float m_attackSpeed;
+    float m_currentAttackTimer;
 
-    public enum m_FireMode 
-    { 
-        SemiAuto,
-        FullAudo
-    }
+    public float m_projectileSpeed = 15f;
 
-    public m_FireMode m_fireMode;
+    Vector3 aimPosition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,19 +28,31 @@ public class PlayerAttackController : MonoBehaviour
         PlayerInput();
     }
 
+    public void OnAttack(InputValue value) 
+    {
+        aimPosition = value.Get<Vector2>();
+    }
+
     void PlayerInput() 
     {
-        Vector3 aimPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
         aimPosition.z = 0;
 
-        Vector3 aimDirection = aimPosition - transform.position;
+        Vector3 aimDirection = aimPosition.normalized;
 
-        aimDirection = aimDirection.normalized;
-
-        if (Input.GetKeyDown(KeyCode.Mouse0)) 
+        if (aimPosition != Vector3.zero)
         {
-            SpawnBullet(aimDirection);
+            m_currentAttackTimer -= Time.deltaTime;
+
+            if (m_currentAttackTimer <= 0)
+            {
+                SpawnBullet(aimDirection);
+
+                m_currentAttackTimer = m_attackSpeed;
+            }
+        }
+        else
+        {
+            m_currentAttackTimer = 0;
         }
 
     }
@@ -49,8 +60,12 @@ public class PlayerAttackController : MonoBehaviour
     void SpawnBullet(Vector3 aimDirection)
     {
         GameObject bullet = Instantiate(m_bulletPrefab, transform.position, Quaternion.identity);
+
+        bullet.transform.up = ((transform.position + new Vector3(aimDirection.x, aimDirection.y)) - transform.position);
+
         var bC = bullet.GetComponent<BulletController>();
         bC.m_direction = aimDirection;
         bC.m_damage = m_playerController.m_attackDamage;
+        bC.m_speed = m_projectileSpeed;
     }
 }

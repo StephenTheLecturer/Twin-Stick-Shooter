@@ -1,5 +1,7 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class BulletController : MonoBehaviour
 {
@@ -11,21 +13,27 @@ public class BulletController : MonoBehaviour
 
     public float m_lifeTime = 5f;
 
+    Transform m_art;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        
+        m_art = transform.Find("Art");
     }
 
+    Vector3 bulletTravelDirection;
     // Update is called once per frame
     void Update()
     {
         MoveBullet();
     }
 
+
     private void OnEnable()
     {
         StartCoroutine(DestoryBullet());
+
+
     }
 
     IEnumerator DestoryBullet()
