@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 94bd179897b9d5446be7cceef729e3e6
+guid: a710ff49dc2c9234a99a65084146a6a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -625661511354810328
-    second: Joystick_Background_512px_0
+      213: -20992347750643910
+    second: Joystick_512px_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -109,24 +109,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Joystick_Background_512px_0
+      name: Joystick_512px_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 820001a9b243157f0800000000000000
-      internalID: -625661511354810328
+      spriteID: a374259229b65bff0800000000000000
+      internalID: -20992347750643910
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Joystick_Background_512px_0: -625661511354810328
+      Joystick_512px_0: -20992347750643910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

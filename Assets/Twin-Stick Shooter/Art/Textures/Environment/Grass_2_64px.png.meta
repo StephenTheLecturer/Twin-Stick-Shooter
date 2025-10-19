@@ -1,15 +1,27 @@
 fileFormatVersion: 2
-guid: da3f76acc0b10574097a67ee8f2d4559
+guid: 154f95d03c573144ea57fc701aaf605e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7716786852368305614
-    second: Gradient_White_Black_512px_0
+      213: 1969850033350850322
+    second: Grass_2_64px_0
+  - first:
+      213: 3815648783514608357
+    second: Grass_2_64px_1
+  - first:
+      213: -1462772253559605414
+    second: Grass_2_64px_2
+  - first:
+      213: -6010123448709525821
+    second: Grass_2_64px_3
+  - first:
+      213: -3555551641087244024
+    second: Grass_2_64px_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -98,27 +110,14 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 64
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 47
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -126,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gradient_White_Black_512px_0
+      name: Grass_2_64px_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 512
-        height: 512
+        width: 10
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ecd41d6c1c8871b60800000000000000
-      internalID: 7716786852368305614
+      spriteID: 2173baa2b20565b10800000000000000
+      internalID: 1969850033350850322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_2_64px_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1
+        width: 10
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e22a093a58e3f430800000000000000
+      internalID: 3815648783514608357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_2_64px_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 2
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57384fa26033bbe0800000000000000
+      internalID: -1462772253559605414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_2_64px_3
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 3
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce4c6ff090c79ca0800000000000000
+      internalID: -6010123448709525821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_2_64px_4
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 2
+        width: 10
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809007cde9428aec0800000000000000
+      internalID: -3555551641087244024
       vertices: []
       indices: 
       edges: []
@@ -161,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gradient_White_Black_512px_0: 7716786852368305614
+      Grass_2_64px_0: 1969850033350850322
+      Grass_2_64px_1: 3815648783514608357
+      Grass_2_64px_2: -1462772253559605414
+      Grass_2_64px_3: -6010123448709525821
+      Grass_2_64px_4: -3555551641087244024
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
